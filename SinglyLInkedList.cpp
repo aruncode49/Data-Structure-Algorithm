@@ -90,8 +90,8 @@ void SLL::insertAfter(node *t, int data)
             throw 1;
         node *n = new node;
         n->item = data;
-        t->next = n;
         n->next = t->next;        
+        t->next = n;
     }
     catch(int e)
     {
@@ -170,7 +170,7 @@ void SLL::delNode(node *t)
             while(r->next != t)
                 r = r->next;
             r->next = t->next;
-            delete r->next;
+            delete t;
         }
     }
     catch(int e)
