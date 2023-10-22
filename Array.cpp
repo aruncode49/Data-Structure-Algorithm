@@ -142,4 +142,5 @@ int Array::getElementIndex(int element)
 Array::~Array()
 {
     delete []p;
+    // program end here
 }
